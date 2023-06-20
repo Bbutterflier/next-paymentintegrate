@@ -1,4 +1,4 @@
-# Next.js Subscription Payments Starter
+# Next.js Subscription Payments
 
 The all-in-one starter kit for high-performance SaaS applications.
 
@@ -8,32 +8,16 @@ The all-in-one starter kit for high-performance SaaS applications.
 - Powerful data access & management tooling on top of PostgreSQL with [Supabase](https://supabase.io/docs/guides/database)
 - Integration with [Stripe Checkout](https://stripe.com/docs/payments/checkout) and the [Stripe customer portal](https://stripe.com/docs/billing/subscriptions/customer-portal)
 - Automatic syncing of pricing plans and subscription statuses via [Stripe webhooks](https://stripe.com/docs/webhooks)
-
+<!-- 
 ## Demo
 
 - https://subscription-payments.vercel.app/
 
 [![Screenshot of demo](./public/demo.png)](https://subscription-payments.vercel.app/)
-
+ -->
 ## Architecture
 
 ![Architecture diagram](./public/architecture_diagram.svg)
-
-## Deploy with Vercel
-
-The Vercel deployment will guide you through creating a Supabase account and project. After installing the Supabase integration, you'll need to configure Stripe with a few simple steps.
-
-**Note:** We're working on our Stripe integration. We've documented the required steps below under "Configure Stripe" until the integration is ready.
-
-To get started, click the "Deploy with Vercel" button below.
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fnextjs-subscription-payments&project-name=nextjs-subscription-payments&repo-name=nextjs-subscription-payments&demo-title=Next.js%20Subscription%20Payments%20Starter&demo-description=Demo%20project%20on%20Vercel&demo-url=https%3A%2F%2Fsubscription-payments.vercel.app&demo-image=https%3A%2F%2Fsubscription-payments.vercel.app%2Fdemo.png&integration-ids=oac_jUduyjQgOyzev1fjrW83NYOv&external-id=nextjs-subscription-payments)
-
-[![Screenshot of Vercel deployment](./public/vercel-deploy.png)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fnextjs-subscription-payments&project-name=nextjs-subscription-payments&repo-name=nextjs-subscription-payments&demo-title=Next.js%20Subscription%20Payments%20Starter&demo-description=Demo%20project%20on%20Vercel&demo-url=https%3A%2F%2Fsubscription-payments.vercel.app&demo-image=https%3A%2F%2Fsubscription-payments.vercel.app%2Fdemo.png&integration-ids=oac_jUduyjQgOyzev1fjrW83NYOv&external-id=nextjs-subscription-payments)
-
-Once the project has deployed, continue with the configuration steps below.
-
-The initial build will fail due to missing Stripe environment variables. After configuring Stripe, redeploy the application.
 
 ## Configure Supabase Auth
 
@@ -60,7 +44,7 @@ We need to configure the webhook pictured in the architecture diagram above. Thi
 1. Click `Select events` under the `Select events to listen to` heading.
 1. Click `Select all events` in the `Select events to send` section.
 1. Copy `Signing secret` as we'll need that in the next step.
-
+<!-- 
 ### Set environment variables
 
 To securely interact with Stripe, we need to add a few [Environment Variables](https://vercel.com/docs/concepts/projects/environment-variables) in the Vercel dashboard.
@@ -70,7 +54,7 @@ To securely interact with Stripe, we need to add a few [Environment Variables](h
 - `STRIPE_WEBHOOK_SECRET_LIVE`
 
 You can find the first two keys on the [API keys tab](https://dashboard.stripe.com/test/apikeys) in Stripe. The `STRIPE_WEBHOOK_SECRET_LIVE` is the `Signing secret` copied in the previous webhook configuration step.
-
+ -->
 ### Redeploy
 
 We need to redeploy the application so that the latest environment variables are present.
@@ -151,12 +135,12 @@ To verify you are running in production mode, test checking out with the [Stripe
 ### Redeploy
 
 Afterward, you will need to rebuild your production deployment for the changes to take effect. Within your project Dashboard, navigate to the "Deployments" tab, select the most recent deployment, click the overflow menu button (next to the "Visit" button) and select "Redeploy."
-
+<!-- 
 ## Develop locally
 
 Deploying with Vercel will create a repository for you, which you can clone to your local machine.
 
-Next, use the [Vercel CLI](https://vercel.com/download) to link your project:
+Next, use the [Vercel CLI](https://vercel.com/download) to link your project: -->
 
 ```bash
 vercel login
